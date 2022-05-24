@@ -7,7 +7,6 @@ def read_file_content(filename):
     # [assignment] Add your code here
     with open(filename) as file:
         content = file.read()
-        print(content)
     return content
 
 
