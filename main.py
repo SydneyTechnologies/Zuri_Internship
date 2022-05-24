@@ -12,8 +12,11 @@ def read_file_content(filename):
 
 def count_words():
     text = read_file_content("./story.txt")
-    # first we turn the text read from the text file and place it in an array
-    text_array = text.split(" ")
+    # first we turn the text read from the text file and place it in an array and format it
+    formated_text = text.replace(".", '')
+    formated_text = formated_text.replace("?", '')
+    formated_text = formated_text.replace("\n", '')
+    text_array = formated_text.split(" ")
     # now we must create a unique list of words from the original text list
     unique_array = []
     result = {}
